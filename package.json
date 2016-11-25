@@ -1,0 +1,58 @@
+{
+  "name": "z-component",
+  "version": "1.0.0",
+  "description": "z-kit component template",
+  "main": "dist/zcomponent.js",
+  "jsnext:main": "dist/zcomponent.es.js",
+  "module": "dist/module/zcomponent.es.js",
+  "scripts": {
+    "lint": "eslint src webpack.config.babel.js && stylelint src/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-webcomponent": "mkdirp dist/webcomponent && ncp src/webcomponent dist/webcomponent && juice dist/webcomponent/z-component.html dist/webcomponent/z-component.html",
+    "build-css": "postcss --use autoprefixer --autoprefixer.browsers \"last 2 versions\" --use cssnano --no-cssnano.discardUnused -o dist/style.css src/style.css",
+    "babel-umd": "mkdirp dist && babel -o dist/zcomponent.js src/zcomponent.js",
+    "babel-esmodule": "mkdirp dist && babel -o dist/zcomponent.es.js --no-babelrc --presets=es2015 src/zcomponent.js",
+    "build": "npm run build-css && npm run build-webcomponent && npm run babel-umd && npm run babel-esmodule",
+    "server": "npm run build && webpack-dev-server --output-public-path=/demo/ --hot",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z-kit/component.git"
+  },
+  "keywords": [
+    "z-kit",
+    "component"
+  ],
+  "author": "Matheus Kautzmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z-kit/component/issues"
+  },
+  "homepage": "https://github.com/z-kit/component",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-transform-es2015-modules-umd": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "backstopjs": "^2.3.3",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "juice": "^4.0.1",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "postcss-cli": "^2.6.0",
+    "preact": "^6.4.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "rimraf": "^2.5.4",
+    "style-loader": "^0.13.1",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0",
+    "webpack": "v2.1.0-beta.27",
+    "webpack-dev-server": "v2.1.0-beta.11"
+  }
+}
