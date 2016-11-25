@@ -8,8 +8,8 @@
   "scripts": {
     "lint": "eslint src webpack.config.babel.js && stylelint src/style.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-webcomponent": "mkdirp dist/webcomponent && ncp src/webcomponent dist/webcomponent && juice dist/webcomponent/z-component.html dist/webcomponent/z-component.html",
-    "build-css": "postcss --use autoprefixer --autoprefixer.browsers \"last 2 versions\" --use cssnano --no-cssnano.discardUnused -o dist/style.css src/style.css",
+    "build-webcomponent": "mkdirp dist/webcomponent && ncp src/webcomponent dist/webcomponent && ncp dist/style.css dist/webcomponent/style.css",
+    "build-css": "postcss --use autoprefixer --autoprefixer.browsers \"last 2 versions\" --use cssnano --no-cssnano.discardUnused -o dist/style.css src/style.css && ncp dist/style.css demo/style.css",
     "babel-umd": "mkdirp dist && babel -o dist/zcomponent.js src/zcomponent.js",
     "babel-esmodule": "mkdirp dist && babel -o dist/zcomponent.es.js --no-babelrc --presets=es2015 src/zcomponent.js",
     "build": "npm run build-css && npm run build-webcomponent && npm run babel-umd && npm run babel-esmodule",
@@ -41,7 +41,6 @@
     "eslint": "^3.10.2",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "juice": "^4.0.1",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
     "postcss-cli": "^2.6.0",
