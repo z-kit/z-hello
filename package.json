@@ -13,7 +13,7 @@
     "babel-umd": "mkdirp dist && babel -o dist/zcomponent.js src/zcomponent.js",
     "babel-esmodule": "mkdirp dist && babel -o dist/zcomponent.es.js --no-babelrc --presets=es2015 src/zcomponent.js",
     "build": "npm run build-css && npm run build-webcomponent && npm run babel-umd && npm run babel-esmodule",
-    "server": "npm run build && webpack-dev-server --output-public-path=/demo/ --hot",
+    "server": "npm run build && webpack-dev-server --output-public-path=/demo/ --hot --no-info",
     "clean": "rimraf dist"
   },
   "repository": {
