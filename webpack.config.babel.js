@@ -3,7 +3,7 @@
 import path from 'path';
 
 const demoPath = path.join(__dirname, './demo');
-const jsxPath = path.join(__dirname, './jsx');
+const sourcePath = path.join(__dirname, './src');
 
 export default {
   entry: {
@@ -33,7 +33,7 @@ export default {
     extensions: ['.js', '.jsx'],
     modules: [
       path.resolve(__dirname, 'node_modules'),
-      jsxPath,
+      sourcePath,
     ],
   },
 };
