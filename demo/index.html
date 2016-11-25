@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../dist/style.css">
+  <!-- Web components polyfill for browser that do not support -->
+  <script src="../node_modules/webcomponents.js/webcomponents.min.js"></script>
+  <!-- Importing and registering the web component -->
+  <link rel="import" href="../dist/webcomponent/z-component.html">
+  <title>z-component demo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Palatino', 'Times', 'Times New Roman';
+    }
+    main {
+      padding-left: 15px;
+    }
+    h1 {
+      font-size: 1.75rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>z-component</h1>
+    <!-- Simple CSS usage -->
+    <p>Render CSS classes:</p>
+    <div class="z-component">
+      <h1 class="z-component__title">Hello World!</h1>
+    </div>
+    <!-- Rendering custom element -->
+    <p>Render Web Platform Custom Element:</p>
+    <z-component>Hello World!</z-component>
+    <!-- Rendering demo/renderJSX.js inside container with preact -->
+    <p>Render Preact Component:</p>
+    <div class="preact-container"></div>
+    <!-- Rendering demo/renderJSX.js inside container with React -->
+    <p>Render React Component:</p>
+    <div class="react-container"></div>
+  </main>
+  <script src="bundle.js"></script>
+</body>
+</html>
