@@ -22,7 +22,7 @@ export default {
           {
             loader: 'css-loader',
             query: {
-              modules: true,
+              modules: false,
             },
           },
         ],
