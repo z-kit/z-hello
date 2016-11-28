@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "z-kit component template",
   "main": "dist/zcomponent.js",
-  "jsnext:main": "dist/zcomponent.es.js",
-  "module": "dist/module/zcomponent.es.js",
+  "jsnext:main": "dist/module.js",
+  "module": "dist/module.js",
   "scripts": {
     "lint": "eslint src webpack.config.babel.js && stylelint src/style.css",
     "test": "npm run lint && ava test",
     "build-webcomponent": "mkdirp dist/webcomponent && ncp src/webcomponent dist/webcomponent && ncp dist/style.css dist/webcomponent/style.css",
     "build-css": "postcss --use autoprefixer --autoprefixer.browsers \"last 2 versions\" --use cssnano --no-cssnano.discardUnused -o dist/style.css src/style.css && ncp dist/style.css demo/style.css",
     "babel-umd": "mkdirp dist && babel -o dist/zcomponent.js src/zcomponent.js",
-    "babel-esmodule": "mkdirp dist && babel -o dist/zcomponent.es.js --no-babelrc --presets=es2015 src/zcomponent.js",
+    "babel-esmodule": "mkdirp dist && babel -o dist/module.js --no-babelrc --presets=es2015 src/zcomponent.js",
     "build": "npm run build-css && npm run build-webcomponent && npm run babel-umd && npm run babel-esmodule",
     "server": "npm run build && webpack-dev-server --output-public-path=/demo/ --hot --no-info",
     "clean": "rimraf dist"

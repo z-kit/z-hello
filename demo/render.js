@@ -1,7 +1,7 @@
 import { h, render as pRender } from 'preact';
 import React from 'react';
 import { render as rRender } from 'react-dom';
-import component from '../dist/zcomponent.es.js';
+import component from '../dist/module';
 
 const PreactComponent = component(h);
 const ReactComponent = component(React.createElement);
