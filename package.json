@@ -48,6 +48,7 @@
     "preact": "^6.4.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-native": "^0.38.0",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
