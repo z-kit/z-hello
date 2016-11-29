@@ -8,7 +8,7 @@
       exports: {}
     };
     factory(mod.exports, global.style);
-    global.zcomponent = mod.exports;
+    global.component = mod.exports;
   }
 })(this, function (exports, _style) {
   'use strict';
