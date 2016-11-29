@@ -2,8 +2,9 @@
   "env": {
     "browser": true
   },
-  "extends": ["airbnb-base"],
+  "extends": ["airbnb"],
   "rules": {
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/prop-types": "off"
   }
 }
