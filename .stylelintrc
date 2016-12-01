@@ -1,6 +1,17 @@
 {
   "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
   "rules": {
-    "comment-whitespace-inside": null
+    "comment-whitespace-inside": null,
+    "plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
   }
 }
