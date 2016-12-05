@@ -4,17 +4,22 @@
  * https://github.com/z-kit/z-component
  */
 
+// Set currentScript, mind the polyfill
+document.polyfillCurrentScript = document.currentScript || document.polyfillCurrentScript;
+
+const name = 'z-component';
+
 class Component extends HTMLElement {
+
   constructor() {
     super();
-    const context = document.currentScript.parentElement;
+    const context = document.polyfillCurrentScript.parentElement;
     const shadowRoot = this.attachShadow({ mode: 'open' });
     const template = context.querySelector('template');
     const clone = template.content.cloneNode(true);
-    clone.querySelector('content').textContent = this.textContent;
     shadowRoot.appendChild(clone);
   }
 }
 
 // Register the new element/component
-window.customElements.define('z-component', Component);
+window.customElements.define(name, Component);
