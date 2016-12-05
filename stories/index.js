@@ -25,4 +25,4 @@ storiesOf('Stateless functional component', module)
   .add('default', () => <Component>Hello World!</Component>);
 
 storiesOf('Web component', module)
-  .add('default', () => <div><z-component>Hello World!</z-component></div>);
+  .add('default', () => <z-component>Hello World!</z-component>);
