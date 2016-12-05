@@ -8,5 +8,12 @@
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",
     "global-require": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": ".storybook/webpack.config.js"
+      }
+    }
   }
 }
