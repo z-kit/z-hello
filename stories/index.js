@@ -2,9 +2,8 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { component } from '../src/component';
 
-// Output files for Web component
-require('file-loader?name=component.js!../src/webcomponent/component.js');
-require('file-loader?name=component.html!../src/webcomponent/component.html');
+// Load Web Component
+require('file-loader?name=component.html!../dist/component.html');
 
 // Import Web component in page
 const link = document.createElement('link');
