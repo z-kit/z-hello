@@ -15,7 +15,8 @@
     "build": "npm run build-module && npm run package && npm run min-package",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
