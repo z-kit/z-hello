@@ -14,7 +14,6 @@
     "min-package": "MIN=true webpack -p",
     "build": "npm run build-module && npm run package && npm run min-package",
     "start": "npm run storybook",
-    "clean": "rimraf dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
