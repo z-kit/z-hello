@@ -3,6 +3,9 @@
     "browser": true
   },
   "extends": ["airbnb"],
+  "globals": {
+    "gemini": true
+  },
   "rules": {
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",
