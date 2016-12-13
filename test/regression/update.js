@@ -10,8 +10,7 @@ setup(() => {
   selenium.start(seleniumConfig, (err, child) => {
     if (err) {
       child.kill();
-      /* eslint-disable no-console */
-      return console.error(err);
+      throw err;
     }
     serve(3000);
     const gemini = new Gemini(geminiConfig);
