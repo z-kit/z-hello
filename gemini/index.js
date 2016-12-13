@@ -1,17 +1,26 @@
 gemini.suite('CSS component', (suite) => {
-  suite.setUrl('/?selectedKind=CSS%20component&selectedStory=default')
-    .setCaptureElements('#storybook-preview-iframe')
+  suite.setUrl('/iframe.html?selectedKind=CSS%20component&selectedStory=default')
+    .setCaptureElements('body')
+    .before((actions) => {
+      actions.setWindowSize(1024, 768);
+    })
     .capture('plain');
 });
 
 gemini.suite('Stateless functional component', (suite) => {
-  suite.setUrl('/?selectedKind=Stateless%20functional%20component&selectedStory=default')
-    .setCaptureElements('#storybook-preview-iframe')
+  suite.setUrl('/iframe.html?selectedKind=Stateless%20functional%20component&selectedStory=default')
+    .setCaptureElements('body')
+    .before((actions) => {
+      actions.setWindowSize(1024, 768);
+    })
     .capture('plain');
 });
 
 gemini.suite('Web Component', (suite) => {
-  suite.setUrl('/?selectedKind=Web%20component&selectedStory=default')
-    .setCaptureElements('#storybook-preview-iframe')
+  suite.setUrl('/iframe.html?selectedKind=Web%20component&selectedStory=default')
+    .setCaptureElements('body')
+    .before((actions) => {
+      actions.setWindowSize(1024, 768);
+    })
     .capture('plain');
 });
