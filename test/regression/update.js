@@ -17,8 +17,9 @@ setup(() => {
     const gemini = new Gemini(geminiConfig);
     return getTests(gemini, (collection) => {
       gemini.update(collection, { reporters: ['flat'], diff: false })
-        .then(() => {
+        .then((results) => {
           child.kill();
+          if (results.errored > 0) process.exit(1);
           process.exit(0);
         })
         .catch(() => {
