@@ -15,6 +15,10 @@ setup(() => {
     serve(3000);
     const gemini = new Gemini(geminiConfig);
     return getTests(gemini, (collection) => {
+      collection
+        .disable('Web Component', { browser: 'ie' })
+        .disable('Web Component', { browser: 'safari' })
+        .disable('Web Component', { browser: 'msedge' });
       gemini.update(collection, { reporters: ['flat'], diff: false })
         .then((results) => {
           child.kill();
