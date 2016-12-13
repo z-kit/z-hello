@@ -7,6 +7,7 @@
     "gemini": true
   },
   "rules": {
+    "new-cap": "off",
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",
     "react/jsx-filename-extension": "off",

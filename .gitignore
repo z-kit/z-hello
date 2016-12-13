@@ -1,5 +1,7 @@
 dist
 storybook-static
 node_modules
+test/unit/testBundle.js
+test/unit/testBundle.js.map
 npm-debug.log
 yarn-error.log
