@@ -1,13 +1,13 @@
 /**
  * Copyright (c) 2016 z-kit contributors.
  * @license MIT LICENSE
- * https://github.com/z-kit/z-component
+ * https://github.com/z-kit/z-hello
  */
 
 // Set currentScript, mind the polyfill
 document.polyfillCurrentScript = document.currentScript || document.polyfillCurrentScript;
 
-const name = 'z-component';
+const name = 'z-hello';
 
 class Component extends HTMLElement {
 

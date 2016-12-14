@@ -7,10 +7,10 @@ const Component = component(React.createElement);
 
 test('JSX component', (t) => {
   const msg = 'should render';
-  const actual = renderJSX(<Component>Hello World!</Component>);
+  const actual = renderJSX(<Component>Hello!</Component>);
   const expected = JSX(
-    <div className="z-component">
-      <h1 className="z-component__title">Hello World!</h1>
+    <div className="z-hello">
+      <h1 className="z-hello__title">Hello!</h1>
     </div>
   );
   return t.deepEqual(actual, expected, msg);

@@ -1,15 +1,15 @@
 /**
  * Copyright (c) 2016 z-kit contributors.
  * @license MIT LICENSE
- * https://github.com/z-kit/z-component
+ * https://github.com/z-kit/z-hello
  */
 
 import styles from './style.css';
 
 // Global to local style mappings, works even if using CSS modules
 const classnames = {
-  component: styles['z-component'] || 'z-component',
-  title: styles['z-component__title'] || 'z-component__title',
+  component: styles['z-hello'] || 'z-hello',
+  title: styles['z-hello__title'] || 'z-hello__title',
 };
 
 export function component(e) {
