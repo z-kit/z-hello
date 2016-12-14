@@ -8,10 +8,7 @@ const geminiConfig = require('./setup/gemini.conf.js');
 
 setup(() => {
   selenium.start(seleniumConfig, (err, child) => {
-    if (err) {
-      child.kill();
-      throw err;
-    }
+    if (err) throw err;
     serve(3000);
     const gemini = new Gemini(geminiConfig);
     return getTests(gemini, (collection) => {
