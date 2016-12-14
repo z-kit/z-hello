@@ -13,6 +13,7 @@ if (process.env.FIREFOX) {
   browsers.firefox = {
     desiredCapabilities: {
       browserName: 'firefox',
+      marionette: true,
     },
   };
 }
@@ -44,5 +45,6 @@ if (process.env.MS_EDGE) {
 module.exports = {
   system: { projectRoot },
   rootUrl: 'http://localhost:3000/',
+  calibrate: false,
   browsers,
 };
