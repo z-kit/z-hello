@@ -1,7 +1,9 @@
 const os = require('os');
+const path = require('path');
 
 const config = {
   version: '3.0.1',
+  basePath: path.resolve(__dirname, './bin'),
   baseURL: 'https://selenium-release.storage.googleapis.com',
   drivers: {},
 };
