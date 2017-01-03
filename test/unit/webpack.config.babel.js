@@ -3,7 +3,7 @@ import nodeExternals from 'webpack-node-externals';
 
 export default {
   entry: {
-    js: [path.resolve(__dirname, './index.js')],
+    js: [path.resolve(__dirname, './suite/index.js')],
   },
   output: {
     path: __dirname,

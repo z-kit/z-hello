@@ -1,7 +1,7 @@
 import test from 'ava';
 import React from 'react';
 import { renderJSX, JSX } from 'jsx-test-helpers';
-import { component } from '../../src/component';
+import { component } from '../../../src/component';
 
 const Component = component(React.createElement);
 
