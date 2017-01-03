@@ -11,7 +11,7 @@
     "test": "npm run unit-test && npm run regression-test",
     "unit-test": "webpack --config test/unit/webpack.config.babel.js && ava test/unit/testBundle.js",
     "regression-test": "npm run test-build && node test/regression/nightwatch/run.js --config test/regression/nightwatch/local.conf.js --env chrome",
-    "sauce-labs": "node test/regression/nightwatch/run.js --config test/regression/nightwatch/sauce.conf.js --skiptags webcomponent --env chrome",
+    "sauce-labs": "SAUCE=true node test/regression/nightwatch/run.js --config test/regression/nightwatch/sauce.conf.js --skiptags webcomponent --env chrome",
     "build-module": "mkdirp dist && babel --source-maps -o dist/module.js src/component.js",
     "package": "webpack",
     "min-package": "cross-env MIN=true webpack -p",
