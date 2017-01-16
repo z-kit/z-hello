@@ -6,5 +6,4 @@ module.exports = {
       .assert.containsText('.z-hello__title', 'Hello!')
       .end();
   },
-  tearDown: require('../nightwatch/sauce'),
 };

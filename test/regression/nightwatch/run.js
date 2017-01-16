@@ -14,11 +14,7 @@ function test() {
   });
 }
 
-if (process.env.SAUCE && !String(process.env.TRAVIS_PULL_REQUEST).match('^(true|1)$')) {
-  startNightwatch();
-} else {
-  installSelenium((err) => {
-    if (err) throw err;
-    test();
-  });
-}
+installSelenium((err) => {
+  if (err) throw err;
+  test();
+});
