@@ -40,7 +40,7 @@ module.exports = function sauce(callback) {
     }, responseCallback);
 
     req.on('error', (e) => {
-      throw e;
+      callback(e);
     });
     req.write(data);
     req.end();
@@ -48,5 +48,5 @@ module.exports = function sauce(callback) {
     callback(error);
   }
 
-  return true;
+  return callback();
 };
