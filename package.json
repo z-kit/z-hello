@@ -91,7 +91,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/z-kit/component.git"
+    "url": "git+https://github.com/z-kit/z-hello.git"
   },
   "keywords": [
     "z-kit",
@@ -100,9 +100,9 @@
   "author": "Matheus Kautzmann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/z-kit/component/issues"
+    "url": "https://github.com/z-kit/z-hello/issues"
   },
-  "homepage": "https://github.com/z-kit/component",
+  "homepage": "https://github.com/z-kit/z-hello",
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "ava": "^0.17.0",
