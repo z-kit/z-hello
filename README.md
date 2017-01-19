@@ -46,6 +46,8 @@ require('z-hello/dist/style.css');
 
 The package does not include the renderer, you can use any renderer that supports SFCs. You could use React, Preact, Inferno, etc.
 
+**Notice: This package contains CSS styling, you may need a bundler that's capable of requiring CSS files like Webpack with [css-loader](https://github.com/webpack/css-loader).**
+
 Once you have chosen the renderer you can include the package in your project as follows:
 
 ```jsx
