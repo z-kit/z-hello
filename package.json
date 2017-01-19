@@ -44,9 +44,6 @@
     "extends": [
       "airbnb"
     ],
-    "globals": {
-      "gemini": true
-    },
     "rules": {
       "new-cap": "off",
       "import/no-extraneous-dependencies": "off",
