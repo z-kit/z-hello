@@ -1,5 +1,7 @@
 # <a name="z-hello"></a> z-hello
 
+[![Build]](https://travis-ci.org/z-kit/z-hello) [![SemVer]](http://semver.org/) [![License]](LICENSE)
+
 The z-kit component template, starter point to create [z-kit compliant components](https://github.com/z-kit/guide). The package is intended to be used in a web page.
 
 ## <a name="toc"></a> Table of contents
@@ -128,3 +130,7 @@ None.
 ## <a name="license"></a> LICENSE
 
 [MIT](LICENSE)
+
+[Build]: https://img.shields.io/travis/z-kit/z-hello.svg
+[SemVer]: https://img.shields.io/:semver-%E2%9C%93-brightgreen.svg
+[License]: https://img.shields.io/npm/l/z-hello.svg
