@@ -15,6 +15,7 @@ Contributions are welcome. This guide will help you understand how the project i
 - [Testing](#testing)
   - [Unit tests](#unit)
   - [Regressiont tests](#regression)
+  - [CI](#ci)
 - [The dist directory](#dist)
 - [Publishing](#publishing)
 - [Finding bugs](#bugs)
@@ -107,6 +108,12 @@ Run the regression tests with:
 ```bash
 npm run regression-test
 ```
+
+### <a name="ci"></a> CI
+
+We use [Travis CI](https://travis-ci.org/) in this project to keep track of builds and run tests before releasing.
+
+The current build status is available [here](https://travis-ci.org/z-kit/z-hello).
 
 ## <a name="dist"></a> The dist directory
 
