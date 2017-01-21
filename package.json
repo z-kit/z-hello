@@ -92,7 +92,10 @@
   },
   "keywords": [
     "z-kit",
-    "component"
+    "component",
+    "browser",
+    "hello",
+    "template"
   ],
   "author": "Matheus Kautzmann",
   "license": "MIT",
