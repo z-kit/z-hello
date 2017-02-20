@@ -1,9 +1,14 @@
-module.exports = {
-  'Plain render': (browser) => {
-    browser
-      .url('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=default')
-      .waitForElementPresent('.z-hello', 1000)
-      .assert.containsText('.z-hello__title', 'Hello!')
-      .end();
-  },
-};
+import { test } from 'ava';
+import Nightmare from 'nightmare';
+
+test('CSS component', (t) => {
+  t.plan(1);
+  const msg = 'should render the Hello! text';
+  const expected = 'Hello!';
+  return Nightmare()
+    .goto('http://localhost:6006/iframe.html?selectedKind=CSS%20component&selectedStory=default')
+    .wait('.z-hello')
+    .evaluate(() => document.querySelector('.z-hello__title').textContent)
+    .end()
+    .then(actual => t.deepEqual(expected, actual, msg));
+});
