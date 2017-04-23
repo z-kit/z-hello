@@ -1,5 +1,7 @@
 # <a name="z-hello"></a> z-hello
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/z-kit/z-hello.svg)](https://greenkeeper.io/)
+
 [![Build]](https://travis-ci.org/z-kit/z-hello) [![SemVer]](http://semver.org/) [![License]](LICENSE)
 
 The z-kit component template, starter point to create [z-kit compliant components](https://github.com/z-kit/guide). The package is intended to be used in a web page.
