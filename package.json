@@ -8,9 +8,9 @@
   "module": "dist/module.js",
   "scripts": {
     "lint": "eslint webpack.config.babel.js .storybook src stories test/regression test/unit/suite && stylelint src/style.css",
-    "test": "npm run lint && npm run unit-test && npm run regression-test-kill",
+    "test": "npm run lint && npm run test:unit && npm run test:regression",
     "clean": "rimraf dist",
-    "unit-test": "webpack --config test/unit/webpack.config.babel.js && ava test/unit/testBundle.js",
+    "test:unit": "webpack --config test/unit/webpack.config.babel.js && ava test/unit/testBundle.js",
     "test:regression": "node test/regression/startTest.js",
     "regression-suite": "wait-on http-get://localhost:6006 && ava test/regression/suite",
     "build-module": "mkdirp dist && babel --source-maps -o dist/module.js src/component.js",

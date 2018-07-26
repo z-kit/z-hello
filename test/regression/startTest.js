@@ -3,7 +3,7 @@ const spawn = require('cross-spawn');
 function startTest() {
   const storybookServer = spawn('npm', ['run', 'storybook'], { detached: true, stdio: 'ignore' });
   try {
-    spawn.sync('npm', ['run', 'regression-test'], {
+    spawn.sync('npm', ['run', 'regression-suite'], {
       detached: false,
       stdio: 'inherit',
     });
