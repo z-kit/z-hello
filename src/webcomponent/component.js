@@ -1,9 +1,3 @@
-/**
- * Copyright (c) 2017 z-kit contributors.
- * @license MIT LICENSE
- * https://github.com/z-kit/z-hello
- */
-
 // Set currentScript, mind the polyfill
 document.polyfillCurrentScript = document.currentScript || document.polyfillCurrentScript;
 
