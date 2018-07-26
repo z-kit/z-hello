@@ -20,7 +20,7 @@
     "build": "npm run package && npm run min-package && npm run build-module",
     "start": "npm run storybook",
     "storybook": "start-storybook -p 6006",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "ava": {
     "require": [
