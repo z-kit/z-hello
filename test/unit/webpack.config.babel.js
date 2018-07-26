@@ -2,6 +2,7 @@ import path from 'path';
 import nodeExternals from 'webpack-node-externals';
 
 export default {
+  mode: 'none',
   entry: {
     js: [path.resolve(__dirname, './suite/index.js')],
   },
