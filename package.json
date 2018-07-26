@@ -8,7 +8,7 @@
   "module": "dist/module.js",
   "scripts": {
     "lint": "eslint webpack.config.babel.js .storybook src stories test/regression test/unit/suite && stylelint src/style.css",
-    "test": "npm run lint && npm run unit-test && npm run regression-test",
+    "test": "npm run lint && npm run unit-test && npm run regression-test-kill",
     "kill": "fkill node",
     "clean": "rimraf dist",
     "unit-test": "webpack --config test/unit/webpack.config.babel.js && ava test/unit/testBundle.js",
