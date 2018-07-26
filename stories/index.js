@@ -1,6 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@kadira/storybook';
-import { component } from '../src/component';
+const React = require('react');
+const { storiesOf } = require('@storybook/react');
+const { component } = require('../src/component');
+
+// Load CSS
+require('../dist/style.css');
 
 // Load Web Component
 require('file-loader?name=component.html!../dist/component.html'); // eslint-disable-line
