@@ -10,12 +10,11 @@ document.polyfillCurrentScript = document.currentScript || document.polyfillCurr
 const name = 'z-hello';
 
 class Component extends HTMLElement {
-
   constructor() {
     super();
-    const context = document.polyfillCurrentScript.parentElement;
+    const ctx = document.polyfillCurrentScript.parentElement;
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const template = context.querySelector('template');
+    const template = ctx.querySelector('template');
     const clone = template.content.cloneNode(true);
     shadowRoot.appendChild(clone);
   }

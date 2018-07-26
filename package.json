@@ -47,6 +47,8 @@
     "rules": {
       "new-cap": "off",
       "import/no-extraneous-dependencies": "off",
+      "import/no-unresolved": "off",
+      "import/no-self-import": "off",
       "react/prop-types": "off",
       "react/jsx-filename-extension": "off",
       "global-require": "off"
