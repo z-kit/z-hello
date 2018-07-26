@@ -1,5 +1,5 @@
 import path from 'path';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import { readFileSync } from 'fs';
 
@@ -7,6 +7,7 @@ const sourcePath = path.join(__dirname, './src');
 const distPath = path.join(__dirname, './dist');
 
 export default {
+  mode: 'production',
   entry: {
     js: [path.join(sourcePath, '/component.js')],
   },
@@ -23,20 +24,17 @@ export default {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader?sourceMap!postcss-loader',
-        }),
+        use: [MiniCssExtractPlugin.loader, 'css-loader?sourceMap', 'postcss-loader'],
       },
       {
         test: /\.hbs$/,
         exclude: /node_modules/,
-        loaders: ['handlebars-loader'],
+        use: ['handlebars-loader'],
       },
     ],
   },
@@ -44,7 +42,7 @@ export default {
     extensions: ['.js', '.css'],
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({ filename: 'style.css' }),
     new HTMLWebpackPlugin({
       filename: 'component.html',
       template: 'src/webcomponent/component.hbs',
