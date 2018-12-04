@@ -7,7 +7,7 @@ const sourcePath = path.join(__dirname, './src');
 const distPath = path.join(__dirname, './dist');
 
 export default {
-  mode: 'production',
+  mode: (process.env.MIN === 'true') ? 'production' : 'none',
   entry: {
     js: [path.join(sourcePath, '/component.js')],
   },
