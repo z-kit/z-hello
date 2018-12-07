@@ -151,7 +151,7 @@
     "babel-loader": "^8.0.4",
     "cross-env": "^5.2.0",
     "cross-spawn": "^6.0.5",
-    "css-loader": "^1.0.1",
+    "css-loader": "^2.0.0",
     "cssnano": "^4.1.7",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
