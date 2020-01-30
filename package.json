@@ -140,7 +140,7 @@
     "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
-    "@babel/register": "^7.0.0",
+    "@babel/register": "^7.8.3",
     "@babel/runtime": "^7.1.5",
     "@storybook/addons": "^v4.0.9",
     "@storybook/react": "^v4.0.9",
