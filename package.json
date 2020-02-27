@@ -143,7 +143,7 @@
     "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.1.5",
     "@storybook/addons": "^5.3.14",
-    "@storybook/react": "^v4.0.9",
+    "@storybook/react": "^5.3.14",
     "acorn": "^6.0.4",
     "autoprefixer": "^9.3.1",
     "ava": "^1.0.0-rc.2",
