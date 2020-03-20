@@ -141,7 +141,7 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.1",
     "@babel/register": "^7.9.0",
-    "@babel/runtime": "^7.1.5",
+    "@babel/runtime": "^7.9.0",
     "@storybook/addons": "^v4.0.9",
     "@storybook/react": "^v4.0.9",
     "acorn": "^6.0.4",
